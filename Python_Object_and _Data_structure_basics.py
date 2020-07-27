@@ -145,5 +145,25 @@ print(bigstring[-1])
 
 # Slicing
 # =======
-
+# So here we are grabbing sub section of a string
+# Let say we want to grab a sub string starting from 2nd letter in the below string and all the way till end
+mystring = "abcdefghijk"
+# notice that we are redefining the variable mystring in above statement.
+print(mystring[2])  # So this is going to give us second element of the string
+print(mystring[2:])  # Now this is going to give us a sub string of starting from second character all the way till end
+print(mystring[:3])  # Notice here we are grabing string from starting letter, upto(but not including) 3rd letter
+# Now suppose we want to grab a subsection of a string from middle. let say "def"
+print(mystring[3:6])
+# Now lets consider the third parameter of slice that is the step size
+# Suppose we want to go grab the dtring from beginning and all the way till end. now there are two ways of doing this
+print(mystring)  # So this ultimately going to grab everything from start till end.
+print(mystring[::])  # So this notation is technically doing to same thing as above, where it says that starting from
+# beginning and going till end.
+# lets include third parameter of this that is step size
+print(mystring[::2])  # So this is going to grab the complete string from start till end but in a step of 2
+# similarly we can also increase the step size
+print(mystring[::3])
+# Note that we can also use this step size for reversing the string
+print(mystring[::-1])  # So this is going to basically going to grab the string from the very start till end but in
+# step size of -1, which is logically going to backward by one and hence this is going to reverse the string.
 
