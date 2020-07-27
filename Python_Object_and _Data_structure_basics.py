@@ -118,3 +118,32 @@ print(len("i am"))  # Notice that here we have character count of 4 which means 
 
 # Indexing and Slicing of String
 # ==============================
+# Lets have a string variable mystring and lets assigned one string to it")
+mystring = "Hello World"
+print(mystring)
+
+# Indexing
+# =========
+print(mystring[0])  # Notice that here we are trying to fetch one letter out of string "mystring" and printing that
+# Also notice that indexing in string starts from 0 and spaces are counted as character.
+
+# So to print 'o' of word 'world' in above string we will write
+print(mystring[7])
+# other examples
+print(mystring[-1])  # Remember that -1 index represent last index location. this is also called as reverse indexing
+print(mystring[-2])
+print(mystring[-3])
+# Note that reverse indexing is used to grab the last letter of any big string, without calculating its length,if we
+# don;t know how big that string is.
+# So lets say
+bigstring = "asdfgghhkkdoooeijshdjdkdkfkfsdfs dfhbsdfjsdfsdfjksndfjksndfbsdhfbiuwefufbushdfusdbfhsdfs"
+# Now we don't have idea of how long this string is so one way is to calculate the length of the string and then print
+# last character of the string. like below
+print(bigstring[len(bigstring) - 1])
+# instead of above tedious code we could just use reverse indexing as below
+print(bigstring[-1])
+
+# Slicing
+# =======
+
+
