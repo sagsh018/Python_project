@@ -167,3 +167,60 @@ print(mystring[::3])
 print(mystring[::-1])  # So this is going to basically going to grab the string from the very start till end but in
 # step size of -1, which is logically going to backward by one and hence this is going to reverse the string.
 
+# String properties and Methods
+# =============================
+
+# Immutability of a string
+# This means that once a string variable assigned a value. Then you cannot change the value of that. because string are
+# immutable.
+# Lets consider the example:
+name = "Sam"
+print(name)
+# Now suppose we want to change the first letter of name from S to P.
+print(name[0])  # This is going to print S, and suppose if we try to reassign the value of name[0] tp P
+# name[0] = "p"  # This will throw ans error. as item assignment is not possibe in case of string.
+print(name)
+# We can do this task with below steps
+substr = "P"
+print(substr)
+name = substr + name[1:]  # So here we have taken help of string concatenation
+print(name)
+# Another example of string concatenation
+x = "Hello World"
+print(x + " It is beautiful")
+# Notice that in above print statement we have given a space after double quotes before starting the sentence. This is
+# because space in python is counted as a character.
+# Lets reassign this new concatenated string back to x
+x = x + " It is beautiful"
+print(x)
+
+# We can also do multiplication of string as well using "*" sign as below
+letter = 'z'
+print(letter * 10)  # This is going to print z 10 times
+# print(letter * 'x') # This is going to throw an error because we can't multiply sequence by non-int of type string.
+# Notice that if we try to use + sign between two numbers its going to add the two numbers
+y = 3 + 5
+print(y)
+# but if you try to use + sign between to string character they are going to be concatenated
+z = '3' + '5'
+print(z)  # This going to give output as 35 and not as 8
+# So be careful while using the variables in python as it is very flexible and it may cause an issue later in the code.
+
+# String methods
+# ==============
+
+x = "Hello World"
+print(x.upper())  # Notice that this upper() function is going to print the uppercase of the string but it is not going
+# To change the actual value of string. Hence we can say that upper() is inplace method
+
+print(x.lower())  # To convert string to lower case.
+
+# Now consider another method named as split()
+print(x.split())  # So this split() function is going to split the string and create a list with the words in it, based
+# on the white space or the letter you are going to pass to this method
+print(x.split('l'))
+
+x = "This is a string example"
+print(x.split('i'))
+
+
