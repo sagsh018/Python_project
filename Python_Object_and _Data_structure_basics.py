@@ -276,6 +276,7 @@ print(f"The name is : {name}")
 age = 28
 print(f"{name} is {age} years old")
 # o/p: Sagar is 28 years old
+print(len(name))
 
 
 
