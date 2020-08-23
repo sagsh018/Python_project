@@ -223,4 +223,59 @@ print(x.split('l'))
 x = "This is a string example"
 print(x.split('i'))
 
+# Print formatting with Strings
+# ==============================
+# Here we are going to study the ways of injecting the variables in the string to print them along with string.
+# This is basically called as String Interpolation
+# One way of doing this is as below
+name_var = "sagar"
+print("My name is : " + name_var)
+# other two ways
+# .format() method
+# f-strings (formatted string literals)
+
+# .format() method
+# ================
+# syntax : 'String here {} then also {}'.format('something1','something2')
+# examples:
+print("This is a string {}".format("INSERTED"))
+print('The {} {} {}'.format('RED', 'GREEN', 'BLUE'))
+# Notice in above example colors are inserted in a same order in which they occur inside .format method
+# index positions inside the .format method starts from 0 and goes on like 0,1,2,...
+print('The {2} {1} {0}'.format('RED', 'GREEN', 'BLUE'))
+# This will print "The BLUE GREEN RED"
+print('The {0} {0} {0}'.format('RED', 'GREEN', 'BLUE'))
+# This will print : "The RED RED RED"
+# We can even use the key value pair over as below
+print('The {q} {b} {f}'.format(f='Fox', b='Brown', q='Quick'))
+# So here we are doing kind of item assignment inside the .format method
+
+# float formatting with the .format() method
+# ==========================================
+# syntax inside the curly braces will look like this : "{value:width.precision f}"
+result = 100/777
+print(result)
+# o/p : 0.1287001287001287
+print('The value is : {r}'.format(r=result))
+# o/p: The value is : 0.1287001287001287
+print('The value is : {r:1.3f}'.format(r=result))
+# o/p: The value is : 0.129
+# so the width here is 1 so before decimal only 1 space is taken and after decimal precision is kept upto 3 decimal
+# hence rounded upto 3 decimal places.
+# Notice that Width on the left side does not means the number of digits, it means number of white spaces
+# example
+result1 = 104.2345
+print('The value is : {r:1.3f}'.format(r=result1))
+# o/p: The value is : 104.234
+
+# f Strings (formatted literals)
+# ===============================
+name = "Sagar"
+print(f"The name is : {name}")
+# With this way we can directly insert the variable inside the print statement and just put f in front of the string
+age = 28
+print(f"{name} is {age} years old")
+# o/p: Sagar is 28 years old
+
+
 
