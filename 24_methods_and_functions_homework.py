@@ -1,3 +1,6 @@
+import string
+
+
 # Write a function that computes the volume of a sphere given its radius.
 
 def sphere_vol(radius):
@@ -83,5 +86,40 @@ def check_palin(s):
     else:
         return False
 
+
 print(check_palin('nurses rusdfsn'))
 # False
+
+
+print(string.ascii_lowercase)
+# abcdefghijklmnopqrstuvwxyz
+
+str = "The quick brown fox jumps over the lazy dog"
+str = str.replace(' ', '')
+
+str1 = set(str)
+print(str1)
+
+
+def ispangram(str1, alphabet=string.ascii_lowercase):
+    flag = False
+    str1 = str1.replace(' ', '')
+    s = set(str1.lower())
+    for item in alphabet:
+        if item in s:
+            flag = True
+        else:
+            flag = False
+            break
+    return flag
+
+
+print(ispangram('The quick brown fox jumps over the lazy dog'))
+# True
+print(ispangram('The quick brown fox jumps over the lazy'))
+# False
+
+
+
+
+
